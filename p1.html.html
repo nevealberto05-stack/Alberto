@@ -1,0 +1,237 @@
+
+    <!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>GovRegisto</title>
+    
+</head>
+<body>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #C9D4F0, #C9D4F0);
+    color: #3a68f1;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    gap: 50px;
+}
+
+/* ESQUERDA */
+.left {
+    flex: 1;
+}
+
+.badge {
+    background: #ffcc00;
+    color: #000;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.left h1 {
+    margin: 20px 0;
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.left p {
+    color: #111010;
+    max-width: 400px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: #1e90ff;
+    border: none;
+    padding: 9px 30px;
+    color: #fff;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background:  #1e90ff;
+}
+
+
+.right {
+    flex: 1;
+    display: grid;
+    grid-template-areas: repeat(2, 2fr);
+    gap: 10px;
+}
+
+.card {
+    background: #eeeff1;
+    padding: 10px;
+    border-radius: 18px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.4s;
+    max-width: 10000px;
+    box-shadow: #000;
+
+}
+a {
+    text-decoration: none;
+    padding-top: 15px;
+}
+
+
+.card:hover {
+    background: #dadeeb;
+    transform: translateY(-3px);
+}
+h6{
+    font-size: 20px;
+    color: #000;
+    bottom: -200px;
+    padding-top: 7px;
+}
+.top-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    box-shadow: 0 2px 6px
+    rgba(0,0,0,0,0.08);
+    z-index: 1000;
+    border: 10px;
+}
+.top-menu nav a{
+    margin: 0 12px;
+    text-decoration: none;
+    color: #1e90ff;
+    font-weight: 500;
+}
+.top-menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 200Spx;
+}
+path{
+    color: #1e90ff;
+     align-items:center;
+}
+svg {
+    color: #1e90ff;
+    align-items:center
+}
+.top-menu a{
+    position: relative;
+    text-decoration: none;
+    color: #3389ec;
+    padding: 6px 0;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+a{
+  height: 100%;
+
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.rodape {
+  margin-top: auto;
+}
+
+
+.rodape-bottom {
+  text-align: center;
+  padding: 15px;
+  background: #f3f4f6;
+  font-size: 14px;
+  color: #374151;
+}
+
+}
+
+
+
+
+
+  
+    </style>
+    
+
+<div class="container">
+    <div class="left">
+        <span class="badge">GovRegisto</span>
+        <h1>Registo facil<br> e digital em 2026</h1>
+        <p>
+           O registo civil online é um passo essencial para garantir a identidade, os direitos e o acesso aos serviços básicos do cidadão, tornando o processo mais rápido, seguro e acessível, sem filas ou deslocações desnecessárias, promovendo dignidade, inclusão e cidadania para todos.
+
+        </p>
+
+        
+    </div>
+
+    
+    <div class="right">
+        <div class="card"><a href="po2.html"> <h6>🗂️ Documento Civil</h6></div></a>
+        <div class="card"><h6> <a href="Rc.html"><h6> 📝Recuperar Documentos Civil</h6></div></a>
+        <div class="card"><h6><a href="Rec-d.html"><h6>🧏 Recuperar Cedula</h6></div></a>
+        <div class="card"><a href="atu.html"><h6>✅ Atualizar Dados</h6></div></a>
+    </div>
+</div>
+<header class="top-menu"> 
+        <nav>
+        <ul>
+            <li><a href="log1.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1e90ff"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>inicio</a> </li>
+            <li><a href="Sobre.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1e90ff"><path d="M440-280h80v-240h-80v240Zm68.5-331.5Q520-623 520-640t-11.5-28.5Q497-680 480-680t-28.5 11.5Q440-657 440-640t11.5 28.5Q463-600 480-600t28.5-11.5ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>Sobre</a> </li>
+            <li><a href="perfil.htm"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1e90ff"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm146.5-204.5Q340-521 340-580t40.5-99.5Q421-720 480-720t99.5 40.5Q620-639 620-580t-40.5 99.5Q539-440 480-440t-99.5-40.5ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm100-95.5q47-15.5 86-44.5-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160q53 0 100-15.5ZM523-537q17-17 17-43t-17-43q-17-17-43-17t-43 17q-17 17-17 43t17 43q17 17 43 17t43-17Zm-43-43Zm0 360Z"/></svg>Perfil</a></li>
+            <li><a href="contacto.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1e90ff"><path d="M758-80q-125 0-247-54.5T289-289Q189-389 134.5-511T80-758q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T347-346q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T630-350l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM201-560l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM201-560Zm358 358Zm-20.5-336.5Q480-597 480-680t58.5-141.5Q597-880 680-880t141.5 58.5Q880-763 880-680t-58.5 141.5Q763-480 680-480t-141.5-58.5ZM660-560h40v-160h-40v160Zm34-206q6-6 6-14t-6-14q-6-6-14-6t-14 6q-6 6-6 14t6 14q6 6 14 6t14-6Z"/></svg> Conctato</a> </li>
+            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1e90ff"><path d="M560-440q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM280-320q-33 0-56.5-23.5T200-400v-320q0-33 23.5-56.5T280-800h560q33 0 56.5 23.5T920-720v320q0 33-23.5 56.5T840-320H280Zm80-80h400q0-33 23.5-56.5T840-480v-160q-33 0-56.5-23.5T760-720H360q0 33-23.5 56.5T280-640v160q33 0 56.5 23.5T360-400Zm440 240H120q-33 0-56.5-23.5T40-240v-440h80v440h680v80ZM280-400v-320 320Z"/></svg> Deposito</a> </li>
+        </ul>
+    </nav>
+ 
+ <script>
+   
+    window.onload = function() {
+        const welcomeText = document.getElementById('welcome-message');
+        // Tenta buscar o nome guardado no navegador
+        const userName = localStorage.getItem('usuarioNome');
+
+        if (userName) {
+            welcomeText.innerText = `Parabéns, ${userName}!`;
+            welcomeText.style.display = 'block';
+        }
+    };
+</script>
+
+
+
+    
+</header>
+</body>
+</html>
