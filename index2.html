@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Alberto Das Neves Armando</title>
+    
+    
+    <style>
+        
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body { background-color: #f8f9fb; color: #2d2d2d; overflow-x: hidden; }
+
+        header {
+            display: flex; justify-content: center; align-items: center;
+            padding: 30px 5%; position: sticky; top: 0;
+            background: rgba(248, 249, 251, 0.95); z-index: 1000;
+        }
+
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a {
+            text-decoration: none; color: #888; font-size: 13px;
+            font-weight: 600; letter-spacing: 1px; transition: 0.3s;
+        }
+        nav ul li a:hover { color: #ff3b3b; }
+
+        .hello {
+            color: #aaa; font-size: 13px; letter-spacing: 2px;
+            display: block; margin-bottom: 10px; text-transform: uppercase; font-weight: 600;
+        }
+        .highlight { color: #ff3b3b; }
+
+        
+        .hero {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 10% 0 15%; min-height: 90vh;
+        }
+
+        .hero-text { flex: 1; max-width: 600px; z-index: 2; }
+        .hero-text h1 { font-size: 64px; font-weight: 700; line-height: 1.1; margin-bottom: 20px; }
+        .hero-text p { color: #777; font-size: 16px; line-height: 1.8; margin-bottom: 40px; max-width: 450px; text-align: justify; }
+         p{
+                text-align: justify;
+         }
+        .btn-cv {
+            display: inline-block; background-color: #ff3b3b; color: white;
+            padding: 18px 40px; text-decoration: none; font-weight: 700;
+            font-size: 12px; letter-spacing: 1px; border-radius: 2px;
+            box-shadow: 0 10px 30px rgba(255, 59, 59, 0.3); transition: 0.3s ease;
+        }
+        .btn-cv:hover { transform: translateY(-5px); background-color: #d32f2f; }
+
+        .hero-image-container { flex: 1; display: flex; justify-content: flex-end; position: relative; }
+        .hero-image-container img { max-width: 100%; height: auto; filter: grayscale(100%); z-index: 1; }
+        .brush-bg {
+            position: absolute; right: -50px; top: 50%; transform: translateY(-50%);
+            width: 120%; height: 80%; background: #e9ecef; z-index: 0;
+            clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); opacity: 0.6;
+        }
+
+        
+        .about { padding: 120px 15%; display: flex; align-items: center; gap: 80px; background-color: #ffffff; }
+        .about-image img { width: 100%; max-width: 450px; filter: grayscale(100%); border-left: 10px solid #ff3b3b; }
+        .about-content h2 { font-size: 40px; margin-bottom: 25px; font-weight: 700; }
+        .stats { display: flex; gap: 40px; margin-top: 30px; }
+        .stat-item h3 { font-size: 32px; color: #ff3b3b; }
+        .stat-item span { font-size: 12px; color: #aaa; text-transform: uppercase; }
+
+        
+        .services { padding: 100px 15%; background-color: #f8f9fb; text-align: center; }
+        .services-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px; }
+        .service-card { background: #fff; padding: 50px 30px; transition: 0.4s; border-bottom: 3px solid transparent; }
+        .service-card:hover { transform: translateY(-10px); border-bottom: 3px solid #ff3b3b; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .icon-box { font-size: 28px; font-weight: 700; color: #ff3b3b; margin-bottom: 20px; }
+
+        
+        .resume { padding: 100px 15%; background-color: #fff; }
+        .resume-container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 50px; }
+        .resume-item { position: relative; padding-left: 30px; border-left: 1px solid #e0e0e0; padding-bottom: 40px; }
+        .resume-item::before { content: ""; position: absolute; left: -6px; top: 0; width: 11px; height: 11px; background: #ff3b3b; border-radius: 50%; }
+        .resume-item .date { color: #ff3b3b; font-size: 13px; font-weight: 600; background: rgba(255, 59, 59, 0.05); padding: 2px 10px; border-radius: 20px; }
+
+        
+        .contact { padding: 100px 15%; background-color: #f8f9fb; }
+        .contact-container { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; margin-top: 50px; }
+        .contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 15px; border: 1px solid #e0e0e0; outline: none; }
+        .contact-form textarea { grid-column: span 2; height: 150px; }
+        .btn-submit { grid-column: span 2; background: #2d2d2d; color: #fff; padding: 15px; border: none; font-weight: 700; cursor: pointer; transition: 0.3s; }
+        .btn-submit:hover { background: #ff3b3b; }
+
+        @media (max-width: 968px) {
+            .hero, .about, .contact-container, .resume-container { flex-direction: column; grid-template-columns: 1fr; text-align: center; padding: 60px 5%; }
+            nav ul { display: none; }
+            .stats { justify-content: center; }
+            .contact-form textarea, .btn-submit { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#about">SOBRE</a></li>
+                <li><a href="#services">SERVIÇOS</a></li>
+                <li><a href="#resume">RESUMO</a></li>
+                <li><a href="#contact">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <span class="hello">— BEM-VINDO</span>
+            <h1>Eu <span class="highlight">Alberto</span> Das Neves Armando</h1>
+            <p> Sou Alberto Das Neves Armando, designer, Reparador de eletrodomésticos e desenvolvedor web, localizado em Nacala-porto,procurando oportunidades de trabalho
+                ao redor do mundo.
+            </p>
+            
+            <a href="meu-curriculo.pdf" download="CV_Jems_Kemerun" class="btn-cv">DOWNLOAD CV</a>
+        </div>
+        <div class="hero-image-container">
+            <div class="brush-bg"></div>
+            <img src="AJ.png" alt="Perfil">
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-image"><img src="AJ.png" alt="Sobre"></div>
+        <div class="about-content">
+            <span class="hello">— SOBRE MIM</span>
+            <h2>Design e Programação desde <span class="highlight">2025</span>.</h2>
+            <p> Acredito que o design vai além da estética; é sobre resolver problemas e criar conexões reais. 
+                Com as pessoas. Com em minimalismo e funcionalidade, tambem aplico meu conhecimento em programação e reparação de eletrodomésticos para desenvolver soluções praticas,eficiente e inteligentes no mundo digital a se destacarem no mundo digital e tecnologico.
+            </p>
+            <div class="stats">
+                <div class="stat-item"><h3>05+</h3><span>Meses de Exp.</span></div>
+                <div class="stat-item"><h3>10+</h3><span>Projetos</span></div>
+                <div class="stat-item"><h3>5+</h3><span>Clientes</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <span class="hello">— O QUE EU FAÇO</span>
+        <h2>Meus <span class="highlight">Serviços</span></h2>
+        <div class="services-container">
+            <div class="service-card"><div class="icon-box">01</div><h3>Visual Design</h3><p>Identidades únicas e impactantes.</p></div>
+            <div class="service-card"><div class="icon-box">02</div><h3>Site Web</h3><p>Sites modernos e responsivos.</p></div>
+            <div class="service-card"><div class="icon-box">03</div><h3>Reparação de Eletrodomésticos</h3><p>Serviços profissionais de reparo e manutenção.</p></div>
+        </div>
+    </section>
+
+    <section id="resume" class="resume">
+        <span class="hello">— MINHA JORNADA</span>
+        <h2>Meu <span class="highlight">Resumo</span></h2>
+        <div class="resume-container">
+            <div class="resume-column">
+                <div class="resume-item"><h4>Estudo online em Designer</h4><span class="date">2023 - 2024</span><p>Especialização em interface de designe.</p></div>
+            </div>
+            <div class="resume-column">
+                <div class="resume-item"><h4>Reparador de Eletrodomésticos</h4><span class="date">2022 - Hoje</span><p>Dou uma segunda vida ao seu eletrodoméstico.</p></div>
+            </div>
+            <div class="resume-column">
+                <div class="resume-item"><h4>Formando em Programação</h4><span class="date">2025 - Hoje</span><p>Transformando ideias em soluções digitais.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <span class="hello">— DIGA OLÁ</span>
+        <h2>Vamos <span class="highlight">Trabalhar</span> Juntos?</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item"><h4>E-mail</h4><p>albertodasn@gmail.com</p></div>
+                <div class="info-item"><h4>Local</h4><p>Nacala-Porto, Mocambique</p></div>
+                  <div class="info-item"><h4>Contato</h4><p>+258 86 1679 534</p></div>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="E-mail" required>
+                <textarea placeholder="Mensagem"></textarea>
+                <button type="submit" class="btn-submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; color: #aaa; font-size: 12px; background: #fff;">
+        © 2024 Alberto Das Neves Armando. Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>
